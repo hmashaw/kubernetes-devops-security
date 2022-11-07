@@ -6,8 +6,10 @@ pipeline {
             steps {
               sh "mvn clean package -DskipTests=true"
 
-              //so that they can be downloaded later
+              // so that they can be downloaded later
               archive 'target/*.jar'
+
+              // Adding comment for Jenkins push test
             }
         }   
     }
